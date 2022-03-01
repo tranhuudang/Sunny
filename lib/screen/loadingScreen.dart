@@ -19,7 +19,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void getWeather() async {
     LocationPermission permission = await Geolocator.requestPermission();
     if (permission == LocationPermission.denied)
-      print("User not alow to access their location");
+      print("User not alow to access their location!");
     Position location = await Geolocator.getCurrentPosition(
         desiredAccuracy: LocationAccuracy.best);
     http.Response response = await http.get(Uri.parse(
